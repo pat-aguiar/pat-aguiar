@@ -42,7 +42,7 @@ I am a career-transitioned Software Engineer with **7 years of experience managi
 ---
 
 ### 📫 Connect with me:
-[LinkedIn](linkedin.com/in/pat-aguiar/) | [Email](paguiar.eng@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/pat-aguiar/) | [Email](mailto:paguiar.eng@gmail.com)
 
 <p align="left">
   <img src="https://github-readme-stats.vercel.app/api?username=[YOUR-USERNAME]&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
