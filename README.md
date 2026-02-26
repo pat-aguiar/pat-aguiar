@@ -47,7 +47,3 @@ I am a career-transitioned Software Engineer with **7 years of experience managi
 <p align="left">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=c&theme=tokyonight" alt="GitHub Stats" />
 </p>
-
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pat-aguiar&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-</p>
