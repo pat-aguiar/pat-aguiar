@@ -8,7 +8,7 @@ I am a career-transitioned Software Engineer with **7 years of experience managi
 
 ### 🚀 Key Technical Projects
 
-#### [AI SaaS Platform: QuickAI] https://github.com/pat-aguiar/AI-SAAS
+#### [AI SaaS Platform: QuickAI](https://github.com/pat-aguiar/AI-SAAS)
 *Built a full-stack (PERN) AI-as-a-Service platform featuring automated resume analysis, background removal, and image generation.*
 - **System Design:** Engineered a modular AI service layer to abstract interactions with multiple models (Gemini, ClipDrop) for diverse SaaS tools.
 - **Monetization & Security:** Implemented tiered subscription-based access control (feature-gating) using Clerk's billing and authentication ecosystem.
@@ -16,7 +16,7 @@ I am a career-transitioned Software Engineer with **7 years of experience managi
 
 
 
-#### [Scalable Property Analytics Engine] https://github.com/pat-aguiar/property-analytics-engine
+#### [Scalable Property Analytics Engine](https://github.com/pat-aguiar/property-analytics-engine)
 *High-throughput Node.js microservice focused on system resilience and performance.*
 - **Fault Tolerance:** Integrated **Circuit Breakers (Opossum)** to maintain 100% system availability during infrastructure latency.
 - **Performance:** Implemented a **Write-Through Redis cache** to optimize data retrieval and handle high-volume traffic spikes.
@@ -42,7 +42,7 @@ I am a career-transitioned Software Engineer with **7 years of experience managi
 ---
 
 ### 📫 Connect with me:
-[LinkedIn] linkedin.com/in/pat-aguiar/ | [Email](paguiar.eng@gmail.com)
+[LinkedIn](linkedin.com/in/pat-aguiar/) | [Email](paguiar.eng@gmail.com)
 
 <p align="left">
   <img src="https://github-readme-stats.vercel.app/api?username=[YOUR-USERNAME]&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
