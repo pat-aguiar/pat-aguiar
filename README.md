@@ -1,8 +1,15 @@
-# Hi there, I'm Patricia 👋
+# Hi, I'm Patricia :)
+
+Full-Stack Software Engineer · Systems Design · Scalable Architecture · 0-to-1 Platforms · React · Node.js · Python
+
+### 📫 Let's Connect!
+[LinkedIn](https://www.linkedin.com/in/pat-aguiar/) | [Email](mailto:paguiar.eng@gmail.com)
+
+---
 
 ### Engineering Leader | Software Engineer | M.S. in Engineering
 
-I am a career-transitioned Software Engineer with **7 years of experience managing high-impact engineering projects in New York City**. I bridge the gap between rigorous system design principles and modern product development, bringing a unique perspective on resilience, scalability, and technical stakeholder management.
+I am a Full-Stack Software Engineer (LatAm based) with **7 years of experience managing high-impact engineering projects in New York City**. I bridge the gap between rigorous system design principles and modern product development, bringing a unique perspective on resilience, scalability, and technical stakeholder management.
 
 🚀 **Building** resilient backend architectures, AI-integrated SaaS applications, and developer tooling using TypeScript, React, and the Modern JavaScript/Node.js ecosystem.
 
@@ -47,6 +54,4 @@ Guardian Approach to Code Quality: Passionate advocate for thorough engineering 
 
 ---
 
-### 📫 Connect with me:
-[LinkedIn](https://www.linkedin.com/in/pat-aguiar/) | [Email](mailto:paguiar.eng@gmail.com)
 
