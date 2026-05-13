@@ -2,9 +2,9 @@
 
 Full-Stack Software Engineer · M.S. in Engineering · Systems Design · Scalable Architecture · React · Node.js · Python
 
-### 📩 Let's Connect :)
-- 📧 Email: paguiar.eng@gmail.com
-- 💼 LinkedIn: [linkedin.com/in/pat-aguiar/](https://www.linkedin.com/in/pat-aguiar/)
+### Let's Connect :)
+- 📧  Email: paguiar.eng@gmail.com
+- 💼   LinkedIn: [linkedin.com/in/pat-aguiar/](https://www.linkedin.com/in/pat-aguiar/)
 
 ---
 
@@ -14,7 +14,7 @@ Full-Stack Software Engineer (LatAm based) with **7 years of experience managing
 
 ---
 
-### 🛠 **Tech Stack & Tools**
+## **Tech Stack & Tools**
 
 * **Languages:** JavaScript (ES6+), TypeScript, Python
 * **Frontend:** React, Redux, TailwindCSS, Web Standards (HTML5/CSS3)
@@ -23,7 +23,7 @@ Full-Stack Software Engineer (LatAm based) with **7 years of experience managing
 
 ---
 
-### 📈 **Key Technical Projects**
+## **Key Technical Projects**
 
 #### 1. [Tempo API Sandbox](https://github.com/pat-aguiar/tempo-api-sandbox) | **AI-Generated OpenAPI Documentation Playground**
 
@@ -48,7 +48,7 @@ A full-stack (PERN) AI-as-a-Service platform featuring resume analysis and AI im
 
 ---
 
-### 📈 Professional Summary
+## 📈 Professional Summary
 Guardian Approach to Code Quality: Passionate advocate for thorough engineering documentation, explicit OpenAPI/Swagger specifications, proactive observability, and security-first development. Native fluency in English & Portuguese. Lehigh University M.S. in Engineering. Fullstack Academy Alumni (NYC).
 
 ---
