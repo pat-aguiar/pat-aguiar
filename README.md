@@ -1,4 +1,4 @@
-Patricia Aguiar
+# Patricia Aguiar
 
 Full-Stack Software Engineer · MS in Engineering (Lehigh) · Fullstack Academy Alumni · React · Python/FastAPI · Node.js
 
