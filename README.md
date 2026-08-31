@@ -1,72 +1,82 @@
 # Patricia Aguiar
 
-Full-Stack Software Engineer · MS in Engineering (Lehigh) · Fullstack Academy Alumni · React · Python/FastAPI · Node.js
+Software engineer working on document extraction — turning messy real-world documents into structured data that can be trusted. Deterministic parsing first, LLM fallback, confidence scoring on every result.
 
-### Let's Connect
-- 📧 Email: paguiar.eng@gmail.com
-- 💼 LinkedIn: [linkedin.com/in/pat-aguiar](https://www.linkedin.com/in/pat-aguiar/)
-- 🔗 Live project: [app.aesync.co](https://app.aesync.co)
+Before software: seven years as a structural engineer in New York, where being confidently wrong has physical consequences. A tool I wrote there in 2020 is still in production today. MS from Lehigh; [thesis](https://preserve.lehigh.edu/lehigh-scholarship/graduate-publications-theses-dissertations/theses-dissertations/space-time
+) on detecting damage in noisy sensor data using a model's own prediction residuals as the signal.
 
----
+**Open to full-time engineering roles — remote, full overlap with US hours.**
 
-Fullstack Engineer with a structural engineering background — seven years designing and delivering technical projects in New York City (Design Engineer → Project Engineer → Project Manager) before shifting into software full-time. I build production applications end-to-end: React/TypeScript frontends, Python/FastAPI and Node/Express backends, real deployments — not local demos.
+  📧 paguiar.eng@gmail.com · 💼 [LinkedIn](https://www.linkedin.com/in/pat-aguiar/) · 🔗 [AE-SYNC](https://aesync.co)
 
-**Currently building [AE-SYNC](https://app.aesync.co)** — an AI-assisted platform that extracts structural elements from CAD/PDF blueprints and renders them in an interactive canvas editor with topology-preserving geometry (move one wall, every connected wall moves with it).
-
-**Open to full-time Fullstack Engineer roles.**
 
 ---
 
-## Tech Stack
+## Stack
 
-* **Languages:** Python, JavaScript (ES6+), TypeScript
-* **Frontend:** React, Vite, Tailwind CSS, Konva
-* **Backend:** FastAPI, Node.js/Express, SQLAlchemy, SQLModel
-* **Data:** PostgreSQL, Redis, Supabase (Auth, Storage, Realtime, Edge Functions)
-* **AI/LLM:** OpenAI API, Google Gemini API, Anthropic Claude API
-* **DevOps & Practices:** Docker, AWS, Render, Netlify, GitHub Actions, REST APIs, OpenAPI documentation, Circuit Breakers, Structured (JSON) Observability
-
----
-
-## Featured Projects
-
-#### 1. [Vision Telemetry Platform](https://github.com/pat-aguiar/glacier-vision-telemetry-platform) | **Real-Time Data Platform**
-
-Full-stack telemetry ingestion and live dashboard, deployed with a real test suite behind it.
-* **Technical Showcase:** Idempotent event ingestion into a partitioned, time-series Postgres schema; live WebSocket dashboard with sliding-window buffers and throttled state.
-* **Rigor:** Constant-time auth checks, dual auth roles, per-client rate limiting; 48-test suite (26 backend, 22 frontend); deployed via Docker/nginx/AWS EC2 with automated HTTPS.
-* **Stack:** Python, FastAPI, SQLAlchemy (async), PostgreSQL, React, TypeScript, WebSockets, Docker, AWS EC2, Nginx.
-
-#### 2. [Tempo API Sandbox](https://github.com/pat-aguiar/tempo-api-sandbox) | **AI-Generated OpenAPI Documentation Playground**
-
-A live, interactive sandbox that transpiles and renders submitted React components in-browser, then generates their OpenAPI spec via an AI backend.
-* **Technical Showcase:** Dynamically transpiles React/TypeScript strings at runtime (Babel standalone) inside a constrained execution scope, with an event-driven Supabase Edge Function (Deno) calling the Anthropic API for OpenAPI schema generation.
-* **Rigor:** Per-keystroke error boundaries, 1000ms debounce on the live editor, real-time Postgres CDC sync back to the UI, and 7 documented ADRs covering the key architectural trade-offs.
-* **Stack:** TypeScript, React, Tailwind CSS, @babel/standalone, Supabase (DB, Realtime, Auth, Edge Functions, Deno), Anthropic API.
-
-#### 3. [QuickAI](https://github.com/pat-aguiar/AI-SAAS) | **Full-Stack AI SaaS Platform**
-
-A PERN AI-as-a-service platform with 6 AI-powered tools behind one API.
-* **Technical Showcase:** Integrates multiple third-party AI providers (Google Gemini via an OpenAI-SDK-compatible client, Clipdrop) behind a consistent request/response contract.
-* **Rigor:** Server-side subscription-tier gating via Clerk plan checks plus a persisted free-usage cap; Neon Postgres data layer powering a public feed with like/unlike toggling.
-* **Stack:** React, Node.js, Express, PostgreSQL (Neon), Clerk, Google Gemini API, Clipdrop, Cloudinary.
-
-#### 4. [VeriLabel](https://github.com/pat-aguiar/verilabel) | **AI Document Analysis Platform**
-
-AI-powered document extraction paired with rule-based validation.
-* **Technical Showcase:** Extracts PDF text (PyMuPDF), then parses it into structured data via a GPT-4o call constrained to JSON-mode output.
-* **Rigor:** Configurable rule engine validates extracted values against Postgres-stored thresholds, automatically classifying each submission.
-* **Stack:** Python, FastAPI, SQLModel, PostgreSQL, OpenAI API, React, TypeScript.
-
-#### 5. [Property Analytics Engine](https://github.com/pat-aguiar/property-analytics-engine) | **Fault-Tolerant Backend Microservice**
-
-A focused Node.js microservice built around resilience and CI-gated correctness.
-* **Technical Showcase:** Wraps a Redis-backed counter in a circuit breaker (opossum) with failure-threshold policies and a graceful degraded-mode fallback instead of failing hard.
-* **Rigor:** Versioned (v1) REST API with routing, business logic, and infrastructure kept in separate layers; live-Redis integration test run via GitHub Actions CI on every push/PR.
-* **Stack:** Node.js, Express 5, Redis, Winston, GitHub Actions.
+* **Languages:** Python, TypeScript, JavaScript, SQL
+* **AI & extraction:** OpenAI, Anthropic, Gemini · Pydantic schema validation · prompt engineering · PyMuPDF · OCR · confidence scoring
+* **Backend:** FastAPI, Node.js/Express, SQLAlchemy, SQLModel, PostgreSQL, Redis, Supabase, REST, OpenAPI, WebSockets
+* **Frontend:** React, TypeScript, Vite, Tailwind CSS, Konva
+* **Infra & practice:** Docker, AWS EC2, nginx, GitHub Actions, pytest, Vitest, circuit breakers, structured JSON observability, ADRs
 
 ---
 
-## Background
+## Projects
 
-Native fluency in English & Portuguese. MS in Structural Engineering, Lehigh University. Software Engineering Immersive, Fullstack Academy (NYC).
+#### [AE-SYNC](https://aesync.co/) |  production document extraction platform
+
+Codebase private · [architecture writeup](https://github.com/pat-aguiar/aesync-architecture)
+
+Three-tier extraction over CAD and PDF construction drawings: deterministic parsing first, Gemini fallback when no vectors exist, a confidence score attached to every result. Built for a domain where a confidently wrong answer is expensive.
+
+* Async processing on FastAPI background tasks with a polling hook that reconstructs sheet geometry from scale metadata; calibration snaps pixels to drafting units (1/4″=1′-0″).
+* React/Konva canvas editor with topology-preserving drag and stretch — move one wall, every connected wall follows — plus undo/redo and autosave.
+* Auth-validated uploads: sanitization, size limits, per-user storage partitioning.
+
+Python · FastAPI · Supabase · React · TypeScript · Konva · Gemini API · Docker · Render · Netlify · GitHub Actions
+
+#### [VeriLabel](https://github.com/pat-aguiar/verilabel) | extraction with deterministic validation
+
+The same architecture in a different document domain. The model proposes; deterministic rules decide.
+
+* PDF text extraction (PyMuPDF) → GPT-4o constrained to JSON-mode output → a configurable rule engine validating every extracted value against thresholds stored in Postgres, classifying each submission as passing or flagged.
+* Modeled variable extraction output as a JSON column alongside strongly-typed relational fields — the shape of extracted data changes per document, the schema around it shouldn't.
+* Normalized environment-specific database URLs so local SQLite and hosted Postgres run on the same SQLAlchemy engine.
+
+Python · FastAPI · SQLModel · PostgreSQL · OpenAI GPT-4o · PyMuPDF · React · TypeScript · Render
+
+#### [Tempo API Sandbox](https://github.com/pat-aguiar/tempo-api-sandbox) | structured schemas from unstructured input
+
+Unstructured code in, validated OpenAPI 3.0 spec out — the same extraction problem with source code as the document.
+
+* Event-driven pipeline: a Postgres webhook triggers a Deno edge function that calls Anthropic and writes the generated spec back to the database. Closed entirely server-side, no client polling; Supabase CDC pushes results to the UI the moment processing finishes.
+* Transpiles arbitrary submitted React/TypeScript at runtime (@babel/standalone) inside a constrained execution scope with a per-keystroke-reset error boundary, so a render failure can't take down the surrounding app.
+* Two test runtimes in one repo — Vitest for the frontend upload flow, Deno test for edge-function webhook-payload validation. 7 ADRs covering the XSS sandboxing and CDC trade-offs.
+
+React · TypeScript · Vite · Tailwind CSS · @babel/standalone · Supabase (Postgres, Auth, Realtime, Edge Functions) · Deno · Anthropic API
+
+#### [Vision Telemetry Platform](https://github.com/pat-aguiar/glacier-vision-telemetry-platform) | real-time ML inference ingestion and monitoring
+
+The problem from my MS thesis, rebuilt on a production stack: noisy sensor data arriving continuously, and the question of what to trust in it.
+
+* Idempotent ingestion of classification events from edge devices into a partitioned, time-series Postgres schema — duplicate submissions and network retries handled safely at the insert layer.
+* Bounding-box overlays rendered as normalized (0–1) SVG coordinates that resize with the image, with zero pixel-math conversion — the same spatial-geometry-over-extracted-output problem as the AE-SYNC canvas.
+* Live WebSocket dashboard with sliding-window buffers and a throttled-state hook capping re-renders under high throughput; auto-reconnect with backoff and jitter.
+* Constant-time credential comparison across two independently rotatable auth roles, custom ASGI middleware capping request body size, per-client rate limiting on ingestion. 48 tests (26 pytest, 22 Vitest).
+
+Python · FastAPI · SQLAlchemy (async) · PostgreSQL · React · TypeScript · WebSockets · Docker · nginx · AWS EC2
+
+#### [Property Analytics Engine](https://github.com/pat-aguiar/property-analytics-engine) | graceful degradation
+
+A service that detects when its dependency is failing and degrades deliberately, rather than returning results it can't stand behind.
+
+* Circuit breaker (opossum) around a Redis-backed counter with configured failure-threshold and timeout policies, plus a degraded-mode fallback that keeps returning valid responses during a Redis outage rather than failing hard.
+* Structured JSON logging capturing per-operation duration and explicit breaker state transitions — open, half-open, closed.
+* Integration test exercising the full request path against a live Redis instance, with an ephemeral Redis container provisioned by GitHub Actions on every push and PR.
+
+Node.js · Express 5 · Redis · Winston · GitHub Actions
+
+---
+
+Native fluency in English and Portuguese. Nine years in the US; based in Brazil, full overlap with US hours.
